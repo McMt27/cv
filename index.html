@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Maxence Canival</title>
+    <link rel="stylesheet" href="styles1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<style>
+    :root {
+        --background-color: #f5f5f5;
+        --text-color: #333;
+        --card-background: #ffffff;
+        --card-border: #ddd;
+        --highlight-color: #007acc;
+        --link-color: #005f99;
+        --contact-card-bg: #6487f0;
+        --contact-card-hover: #536ff8;
+        --contact-card-text: #ffffff;
+    }
+
+    [data-theme="dark"] {
+        --background-color: #0d1117;
+        --text-color: #c9d1d9;
+        --card-background: #161b22;
+        --card-border: #21262d;
+        --highlight-color: #58a6ff;
+        --link-color: #1f6feb;
+        --contact-card-bg: #5c6bc0;
+        --contact-card-hover: #3e4c8a;
+        --contact-card-text: #ffffff;
+    }
+
+    [data-theme="protanopia"] {
+        --background-color: #2b2b2b;
+        --text-color: #ffffff;
+        --card-background: #3c3c3c;
+        --card-border: #5c5c5c;
+        --highlight-color: #e1a95f;
+        --link-color: #d17a5f;
+        --contact-card-bg: #a58c4f;
+        --contact-card-hover: #84622d;
+        --contact-card-text: #333;
+    }
+
+    [data-theme="deuteranopia"] {
+        --background-color: #2e3440;
+        --text-color: #eceff4;
+        --card-background: #3b4252;
+        --card-border: #434c5e;
+        --highlight-color: #a3be8c;
+        --link-color: #88c0d0;
+        --contact-card-bg: #4c7c55;
+        --contact-card-hover: #3c6741;
+        --contact-card-text: #eceff4;
+    }
+
+    [data-theme="tritanopia"] {
+        --background-color: #272822;
+        --text-color: #f8f8f2;
+        --card-background: #3e3d32;
+        --card-border: #49483e;
+        --highlight-color: #f92672;
+        --link-color: #66d9ef;
+        --contact-card-bg: #a94c6c;
+        --contact-card-hover: #8b3f57;
+        --contact-card-text: #f8f8f2;
+    }
+
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: var(--background-color);
+        color: var(--text-color);
+        overflow-x: hidden;
+    }
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 2rem;
+        background: var(--card-background);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .QRcode {
+        margin-top: 2rem;
+        align-items: center;
+    }
+
+    .QRcode img {
+        width: 180px;
+        height: 180px;
+    }
+
+    p .header h1 {
+        font-size: 2rem;
+        margin: 0;
+        padding-left: 70px;
+    }
+
+    .header p {
+        padding-left: 70px;
+        margin: 0;
+        font-size: 1rem;
+        opacity: 0.8;
+    }
+
+    .id {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+    }
+
+
+    .id img {
+        width: 80px;
+        height: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 1px solid var(--highlight-color);
+        transition: transform 0.3s ease;
+    }
+
+    .id img:hover {
+        transform: scale(1.3);
+    }
+
+
+    .id h1 {
+        margin: 0;
+        font-size: 1.8rem;
+    }
+
+    .id p {
+        margin: 0;
+        font-size: 1rem;
+        opacity: 0.8;
+    }
+
+    .theme-buttons {
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .theme-buttons button {
+        background: var(--card-background);
+        color: var(--text-color);
+        border: 1px solid var(--card-border);
+        border-radius: 5px;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .theme-buttons button:hover {
+        background: var(--highlight-color);
+        color: var(--background-color);
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 3rem 1rem;
+    }
+
+    .big-card {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 3rem 1rem;
+        background: var(--card-background);
+        border: 1px solid var(--card-border);
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        margin-left: 95px;
+        max-width: 1000px;
+    }
+
+    .card {
+        background: var(--card-background);
+        border: 1px solid var(--card-border);
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        padding: 2rem;
+        margin: 1rem;
+        flex: 1 1 calc(50% - 2rem);
+        max-width: 500px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+    }
+
+    .card h2,
+    .big-card h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: var(--highlight-color);
+    }
+
+    .card ul,
+    .big-card ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .card ul li,
+    .big-card ul li {
+        margin-bottom: 0.5rem;
+    }
+
+    .contact-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        background: var(--contact-card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        margin: 1rem;
+        width: 300px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+        color: var(--contact-card-text);
+        cursor: pointer;
+    }
+
+    .contact-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
+        background: var(--contact-card-hover);
+    }
+
+    .contact-card i {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        color: var(--contact-card-text);
+        transition: color 0.3s ease;
+    }
+
+    .contact-card p {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+    }
+
+    .project-link {
+        text-decoration: none;
+    }
+
+    .proof-button {
+        background: var(--contact-card-bg);
+        color: white;
+        border: none;
+        padding: 5px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s;
+    }
+
+    .proof-button:hover {
+        background: var(--contact-card-hover);
+    }
+
+
+    footer {
+        text-align: center;
+        padding: 2rem;
+        background: var(--card-background);
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        color: var(--text-color);
+    }
+</style>
+</head>
+
+
+
+<body data-theme="light">
+
+    <body>
+        <div class="header">
+            <div class="id">
+                <img src="1000004454.jpg" alt="Photo de profil">
+                <div>
+                    <h1>Maxence Canival</h1>
+                    <p>Étudiant en Réseaux et Télécommunications</p>
+                </div>
+            </div>
+            <div class="theme-buttons">
+                <button onclick="setTheme('light')">Mode Jour</button>
+                <button onclick="setTheme('dark')">Mode Nuit</button>
+                <button onclick="setTheme('protanopia')">Protanopie</button>
+                <button onclick="setTheme('deuteranopia')">Deutéranopie</button>
+                <button onclick="setTheme('tritanopia')">Tritanopie</button>
+            </div>
+        </div>
+        <div>
+            <div class="big-card">
+                <h2>À propos de moi</h2>
+                <p>
+                    Étudiant en BUT Réseaux et Télécommunications au campus 3 de Caen, j'ai pour passion la
+                    Cybersécurité et le Développement. Curieux et rigoureux, J'essaie d'intégrer au quotidien de
+                    meilleures pratiques en matière de sécurité.
+                    <br><br>
+                    J’apprécie particulièrement les projets collaboratifs et interactifs, où je peux mettre à profit ma
+                    créativité et mes compétences techniques pour relever des défis complexes.
+                </p>
+
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="card">
+                <h2>Formation</h2>
+                <ul>
+                    <li>BUT Réseaux et Télécommunications à Ifs au campus 3 de Caen - Option Cybersécurité</li>
+                    <li>Baccalauréat - Spécialité : Mathématiques et Numérique et Sciences de l'Informatique</li>
+                    <li>CS50's Introduction to Computer Science (Harvard Online Course)</li>
+                    <li>MOOC ANSSI - Bonnes pratiques en cybersécurité</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Compétences</h2>
+                <ul>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>Python, Linux, Shell scripting</li>
+                    <li>Réseaux : DNS, DHCP, VLAN, SSH, routage, agégation de lien, droits NTFS</li>
+                    <li>Gestion de bases de données avec SQL</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Langues</h2>
+                <ul>
+                    <li>Français : Langue maternelle</li>
+                    <li>Anglais : Niveau Bac +</li>
+                    <li>Espagnol : Niveau Bac</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Expériences professionnelles</h2>
+                <ul>
+                    <li><strong>Stage à la DDTM de Rouen :</strong> Développement de programmes Python pour résoudre des
+                        problématiques spécifiques, avec une initiation à la cartographie.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Projets</h2>
+                <ul>
+
+
+
+                    <li>
+                        Création d'un site de location de voitures BMW, mettant en avant des véhicules et mes
+                        compétences
+                        acquises durant mes 6 premiers mois à l'IUT. ->
+                        <a href="https://mcmt27.github.io/SAE14_projet_final/" class="project-link" target="_blank">
+                            <button class="proof-button">Site Web</button>
+                        </a>
+                    </li><br>
+
+                    <li>Réalisation d'un portfolio. <strong>(en cour)</strong></li><br>
+
+                    <li>
+                        Réalisation du MOOC de l'ANSSI. ->
+                        <a href="MOOC de l'ANSSI.jpg" class="project-link" target="_blank">
+                            <button class="proof-button">Diplôme</button>
+                        </a>
+                    </li><br>
+
+                    <li>Programmation en python avec une API (PokeAPI) pour produire un site interactif pour explorer
+                        les
+                        données de Pokémon. <strong>(en cour)</strong></li><br>
+
+                    <li>Conception de solutions réseau pour petites entreprises : gestion d'un cahier des charges,
+                        production de livrables, architecture réseau (physique et logique), gestion d'adressage IP et
+                        sécurité (initiation). <strong>(en cour)</strong></li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Contact</h2>
+
+                <div class="container">
+                    <div class="contact-card" onclick="window.location.href='mailto:maxence.canival@etu.unicaen.fr'">
+                        <i class="fas fa-envelope"></i>
+                        <p>Email</p>
+                        <p>maxence.canival@etu.unicaen.fr</p>
+                    </div>
+
+                    <div class="contact-card" onclick="window.location.href='https://github.com/McMt27'">
+                        <i class="fab fa-github"></i>
+                        <p>GitHub</p>
+                    </div>
+
+                    <div class="contact-card"
+                        onclick="window.location.href='https://www.linkedin.com/in/maxence-canival-b87028345/'">
+                        <i class="fab fa-linkedin"></i>
+                        <p>LinkedIn</p>
+                    </div>
+                    <div class="QRcode">
+                        <img src="1000010209.png" alt="QR Code de contact">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Maxence Canival. Tous droits réservés.</p>
+        </footer>
+
+        <script>
+            function setTheme(theme) {
+                document.body.setAttribute('data-theme', theme);
+            }
+        </script>
+    </body>
+
+</html>
