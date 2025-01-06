@@ -284,6 +284,122 @@
         width: 100%;
         color: var(--text-color);
     }
+
+    /* Responsive CSS */
+@media (max-width: 768px) { /* Tablettes */
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .id {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .id img {
+        width: 70px;
+        height: 80px;
+    }
+
+    .id h1 {
+        font-size: 1.5rem;
+    }
+
+    .id p {
+        font-size: 0.9rem;
+    }
+
+    .theme-buttons {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    .big-card, .card {
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+
+    .big-card h2, .card h2 {
+        font-size: 1.2rem;
+    }
+
+    .big-card p, .card ul li {
+        font-size: 0.9rem;
+    }
+
+    .contact-card {
+        width: 100%;
+    }
+
+    .QRcode img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media (max-width: 480px) { /* Téléphones */
+    .header {
+        padding: 0.5rem;
+    }
+
+    .id img {
+        width: 60px;
+        height: 70px;
+    }
+
+    .id h1 {
+        font-size: 1.2rem;
+    }
+
+    .id p {
+        font-size: 0.8rem;
+    }
+
+    .theme-buttons button {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.5rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .big-card, .card {
+        margin: 1rem auto;
+        padding: 0.8rem;
+        flex: 1 1 100%;
+    }
+
+    .big-card h2, .card h2 {
+        font-size: 1rem;
+    }
+
+    .big-card p, .card ul li {
+        font-size: 0.8rem;
+    }
+
+    .contact-card {
+        padding: 1rem;
+        width: 100%;
+    }
+
+    .contact-card i {
+        font-size: 2rem;
+    }
+
+    .QRcode img {
+        width: 100px;
+        height: 100px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
+}
+
 </style>
 </head>
 
